@@ -4,9 +4,13 @@ class Student:
         self.name = name
         self.age = age
 
-    code = '001'
-    name = '222'
-    __age = 13
+    @property
+    def name(self):
+        return self.name;
+
+    @property
+    def name(self,name):
+        self.name = name;    
 
     def display(self):
         return self.code + self.name + '年龄' + str(self.age)
